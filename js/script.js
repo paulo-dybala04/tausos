@@ -91,6 +91,7 @@ $(document).ready(function(){
 		if(arrayUser.nama == ""){
 			$('.nama').html("User tidak ada");
 		}else{
+                        $('title').text(arrayUser.nama + " | Sosial Media ");
 			$('.nama').text(arrayUser.nama);
 		}
 
