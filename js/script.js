@@ -43,6 +43,9 @@ $(document).ready(function(){
 				contentType: "application/json",
 				headers: {"Api-key":"3b01aadd-d590-11ea-aef4-0242ac110002","Private":"true"},
 				data: JSON.stringify({"nama":nama,"bio":bio,"mode":mode,"wa":wa,"fb":fb,"ig":ig,"tw":tw,"yt":yt}),
+				beforeSend: function(){
+				  $('.publish').html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`)
+				},
 				success: function(data){
 					var arrayData = JSON.parse(data);
 					window.location.href = "user.html?niu=" + arrayData.id.toString()
